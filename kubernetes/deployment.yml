@@ -25,9 +25,9 @@ spec:
             requests:
               cpu: 200m
           args:
-            - /bin/sh
-            - -c
-            - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 100
+          - /bin/sh
+          - -c
+          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 100
           readinessProbe:
             httpGet:
               path: '/actuator/health'
